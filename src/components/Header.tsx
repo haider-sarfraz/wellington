@@ -25,7 +25,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-black-overlay backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-black-overlay">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
           {/* Left Navigation - Desktop */}
@@ -34,9 +34,9 @@ const Header = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-public-sans font-normal text-base tracking-tight transition-colors ${
+                className={`font-public-sans font-normal text-base tracking-tight transition-colors pb-1 ${
                   isActive(link.path)
-                    ? 'text-brand-super-white-v2 border-b-2 border-brand-gold pb-1'
+                    ? 'text-brand-super-white-v2 border-b-2 border-brand-gold'
                     : 'text-brand-super-white-v2/80 hover:text-brand-super-white-v2'
                 }`}
               >
