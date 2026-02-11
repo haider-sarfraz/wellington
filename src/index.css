@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Fonts */
+@font-face {
+  font-family: 'Radicalis';
+  src: url('./assets/fonts/Radicalis.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ModernSans';
+  src: url('./assets/fonts/ModernSans-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CarlaSans';
+  src: url('./assets/fonts/carla-sans.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'ModernSans', sans-serif;
+}
