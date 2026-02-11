@@ -1,0 +1,42 @@
+import type React from 'react';
+
+interface FacebookIconProps {
+  width?: number | string;
+  height?: number | string;
+  className?: string;
+  onClick?: () => void;
+}
+
+export const FacebookIcon: React.FC<FacebookIconProps> = ({ 
+  width = 40, 
+  height = 40, 
+  className = "",
+  onClick 
+}) => {
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (onClick && (e.key === 'Enter' || e.key === ' ')) {
+      e.preventDefault();
+      onClick();
+    }
+  };
+
+  return (
+    <svg 
+      width={width} 
+      height={height} 
+      viewBox="0 0 40 40" 
+      fill="none" 
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      onClick={onClick}
+      onKeyDown={handleKeyDown}
+      role={onClick ? 'button' : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      aria-label="Facebook"
+      style={{ cursor: onClick ? 'pointer' : 'default' }}
+    >
+      <title>Facebook</title>
+      <path d="M20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20C0 8.95431 8.95431 0 20 0ZM20 1C9.50659 1 1 9.50659 1 20C1 30.4934 9.50659 39 20 39C30.4934 39 39 30.4934 39 20C39 9.50659 30.4934 1 20 1ZM25 10.0039L24.9912 13.873L23.0029 13.874C21.8899 13.8741 21.6875 14.3422 21.6875 15.2676V17.1914H24.8828L24.8857 21.2959H21.6875L21.6836 30H17.7842L17.7871 21.2959H15V17.1904H17.7871V14.9229C17.7871 11.9311 19.5277 10.0001 22.2217 10L25 10.0039Z" fill="#F0F0F0"/>
+    </svg>
+  );
+};

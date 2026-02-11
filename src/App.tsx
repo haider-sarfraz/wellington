@@ -1,16 +1,23 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import OurStory from './components/OurStory';
+import Home from './pages/Home';
+import Gallery from './pages/Gallery';
+import Experience from './pages/Experience';
+import Plans from './pages/Plans';
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <div className="relative">
+    <BrowserRouter>
+      <div className="min-h-screen">
         <Header />
-        <Hero />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/plans" element={<Plans />} />
+        </Routes>
       </div>
-      <OurStory />
-    </div>
+    </BrowserRouter>
   );
 }
 
