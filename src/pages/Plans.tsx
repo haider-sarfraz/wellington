@@ -6,6 +6,7 @@ import coupleOutdoor from "../assets/images/gallery-pictures/collage-pic-3.jpg";
 import bouqueHolderIndoor from "../assets/images/gallery-pictures/collage-pic-2.jpg";
 import heirloom from "../assets/images/gallery-pictures/collage-pic-12.png";
 import brideWithRosesPhoto from "../assets/images/gallery-pictures/bride-with-rose-front-photo.png";
+import { SubSectionHeading } from "../components/design-system/sub-section-heading";
 
 const Plans = () => {
   return (
@@ -139,30 +140,55 @@ const Plans = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between pl-[126px] pr-[214px] pt-[80px] pb-[160px] relative">
-        {/* Left section */}
-        <div className="flex flex-col w-[60%]">
-          <span className="font-brittany text-brand-charcoal text-[96px] leading-[137px]">
-            5.
-          </span>
-          <Description className="font-hatton font-medium text-left">
-          Heirlooms for a Lifetime
-          </Description>
-          <Description>
-          Your wedding photographs are more than memories — they are heirlooms. Designed to be cherished, shared, and passed down for generations, your final collection tells your story with beauty, emotion, and enduring artistry.
-          </Description>
-        </div>
+      <div className="flex flex-col items-center justify-center gap-[65px] pl-[126px] pr-[214px] pt-[60px] pb-[100px]">
+        <Heading>
+          All Services
+        </Heading>
         
-        {/* Right Side - Image with Golden Border */}
-        <div className="absolute right-[214px] -bottom-[20px]">
-          <FramedImage 
-            src={heirloom}
-            alt="Bride holding a bouque indoor"
-            direction="left"
-          />
-        </div>
+        <div className="flex flex-col gap-[20px] max-w-[1100px]">
+          <Description className="w-full">
+            All of our plans are fully customizable to meet your unique needs. You can also pick from our services listed below to build your own plan for your special day. 
+          </Description>
+
+          <SubSectionHeading className="w-full">
+            1. Luxury Photography
+          </SubSectionHeading>
+          <Description className="w-full">
+            We create refined, editorial-quality wedding photography that preserves the beauty, emotion, and meaning of your day with timeless elegance and intentional artistry.
+          </Description>
+
+          <SubSectionHeading className="w-full">
+            2. Personally Crafted Films
+          </SubSectionHeading>
+          <Description className="w-full">
+            We craft cinematic films that capture the essence of your wedding day with refined storytelling, intentional pacing, and a refined cinematic style.
+          </Description>
+
+          <SubSectionHeading className="w-full">
+            3. Content Creation
+          </SubSectionHeading>
+          <Description className="w-full">
+            A dedicated social media content creator allows you to stay fully present on your wedding day while beautifully capturing candid, behind-the-scenes moments designed to be shared and enjoyed in real time. 
+          </Description>
+          
+          <SubSectionHeading className="w-full">
+            4. Photo Booth 
+          </SubSectionHeading>
+          <Description className="w-full">
+            A photo booth brings an effortless burst of energy to your reception, giving guests a fun, interactive way to let loose, laugh together, and create unforgettable keepsakes—whether through timeless photo strips or immersive 360° experiences.
+          </Description>
+          
+          <SubSectionHeading className="w-full">
+            5. Virtual Guest Book Station
+          </SubSectionHeading>
+          <Description className="w-full">
+            A virtual guest book gives your loved ones an opportunity to share personal messages with you. Filmed on your wedding day and kept for a lifetime.
+          </Description>
+
+
       </div>
 
+      </div>
     </div>
   );
 };
