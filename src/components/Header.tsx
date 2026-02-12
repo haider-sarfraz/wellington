@@ -1,9 +1,10 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logoWhite from '../assets/images/Transparent name 1 1.png';
 import { FacebookIcon, InstagramIcon, TwitterIcon } from './icon-components';
 
 const Header = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -15,6 +16,10 @@ const Header = () => {
     document.body.appendChild(anchor);
     anchor.click();
     document.body.removeChild(anchor);
+  };
+
+  const handleLetsTalkClick = () => {
+    navigate('/contact-us');
   };
 
   const navLinks = [
@@ -90,7 +95,7 @@ const Header = () => {
             </div>
             
             {/* Let's Talk Button */}
-            <button type="button" className="hidden sm:flex bg-brand-super-white hover:bg-brand-super-white/90 text-brand-charcoal font-public-sans font-medium px-6 py-3 rounded-full text-base tracking-tight transition-colors">
+            <button type="button" className="hidden sm:flex bg-brand-super-white hover:bg-brand-super-white/90 text-brand-charcoal font-public-sans font-medium px-6 py-3 rounded-full text-base tracking-tight transition-colors" onClick={handleLetsTalkClick}>
               Let's Talk
             </button>
           </div>
