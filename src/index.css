@@ -51,46 +51,44 @@
 /* Public Sans - Multiple weights */
 @font-face {
   font-family: 'Public Sans';
-  src: url('./assets/fonts/public-sans/webfonts/PublicSans-Light.woff2') format('woff2'),
-       url('./assets/fonts/public-sans/webfonts/PublicSans-Light.woff') format('woff'),
-       url('./assets/fonts/public-sans/webfonts/PublicSans-Light.ttf') format('truetype');
-  font-weight: 300;
+  src: url('./assets/fonts/PublicSans-ExtraLight.otf') format('opentype');
+  font-weight: 200;  /* Ultra Light weight */
   font-style: normal;
 }
-
 @font-face {
   font-family: 'Public Sans';
-  src: url('./assets/fonts/public-sans/webfonts/PublicSans-Regular.woff2') format('woff2'),
-       url('./assets/fonts/public-sans/webfonts/PublicSans-Regular.woff') format('woff'),
-       url('./assets/fonts/public-sans/webfonts/PublicSans-Regular.ttf') format('truetype');
-  font-weight: 400;
+  src: url('./assets/fonts/PublicSans-Light.otf') format('opentype');
+  font-weight: 300;  /* Light weight */
   font-style: normal;
 }
-
 @font-face {
   font-family: 'Public Sans';
-  src: url('./assets/fonts/public-sans/webfonts/PublicSans-Medium.woff2') format('woff2'),
-       url('./assets/fonts/public-sans/webfonts/PublicSans-Medium.woff') format('woff'),
-       url('./assets/fonts/public-sans/webfonts/PublicSans-Medium.ttf') format('truetype');
-  font-weight: 500;
+  src: url('./assets/fonts/PublicSans-Regular.otf') format('opentype');
+  font-weight: 400;  /* Regular weight */
   font-style: normal;
 }
-
 @font-face {
   font-family: 'Public Sans';
-  src: url('./assets/fonts/public-sans/webfonts/PublicSans-SemiBold.woff2') format('woff2'),
-       url('./assets/fonts/public-sans/webfonts/PublicSans-SemiBold.woff') format('woff'),
-       url('./assets/fonts/public-sans/webfonts/PublicSans-SemiBold.ttf') format('truetype');
-  font-weight: 600;
+  src: url('./assets/fonts/PublicSans-Medium.otf') format('opentype');
+  font-weight: 500;  /* Medium weight */
   font-style: normal;
 }
-
 @font-face {
   font-family: 'Public Sans';
-  src: url('./assets/fonts/public-sans/webfonts/PublicSans-Bold.woff2') format('woff2'),
-       url('./assets/fonts/public-sans/webfonts/PublicSans-Bold.woff') format('woff'),
-       url('./assets/fonts/public-sans/webfonts/PublicSans-Bold.ttf') format('truetype');
-  font-weight: 700;
+  src: url('./assets/fonts/PublicSans-SemiBold.otf') format('opentype');
+  font-weight: 600;  /* Semi Bold weight */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Public Sans';
+  src: url('./assets/fonts/PublicSans-Bold.otf') format('opentype');
+  font-weight: 700;  /* Bold weight */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Public Sans';
+  src: url('./assets/fonts/PublicSans-ExtraBold.otf') format('opentype');
+  font-weight: 800;  /* Extra Bold weight */
   font-style: normal;
 }
 

@@ -36,8 +36,8 @@ const Header = () => {
                 to={link.path}
                 className={`font-public-sans font-normal text-base tracking-tight transition-colors pb-1 ${
                   isActive(link.path)
-                    ? 'text-brand-super-white-v2 border-b-2 border-brand-gold'
-                    : 'text-brand-super-white-v2/80 hover:text-brand-super-white-v2'
+                    ? 'text-brand-super-white border-b-2 border-brand-gold'
+                    : 'text-brand-super-white/80 hover:text-brand-super-white'
                 }`}
               >
                 {link.label}
@@ -48,7 +48,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="lg:hidden text-brand-super-white-v2 p-2"
+            className="lg:hidden text-brand-super-white p-2"
             aria-label="Menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -90,7 +90,7 @@ const Header = () => {
             </div>
             
             {/* Let's Talk Button */}
-            <button type="button" className="hidden sm:flex bg-brand-super-white-v2 hover:bg-brand-super-white-v2/90 text-brand-charcoal font-public-sans font-medium px-6 py-3 rounded-full text-base tracking-tight transition-colors">
+            <button type="button" className="hidden sm:flex bg-brand-super-white hover:bg-brand-super-white/90 text-brand-charcoal font-public-sans font-medium px-6 py-3 rounded-full text-base tracking-tight transition-colors">
               Let's Talk
             </button>
           </div>
@@ -98,7 +98,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Navigation - Hidden by default, would need state management for toggle */}
-      <div className="lg:hidden hidden border-t border-brand-super-white-v2/20">
+      <div className="lg:hidden hidden border-t border-brand-super-white/20">
         <nav className="px-4 py-4 space-y-3">
           {navLinks.map((link) => (
             <Link
@@ -106,8 +106,8 @@ const Header = () => {
               to={link.path}
               className={`block font-public-sans font-medium text-base tracking-tight py-2 ${
                 isActive(link.path)
-                  ? 'text-brand-super-white-v2 border-l-2 border-brand-gold pl-3'
-                  : 'text-brand-super-white-v2/80'
+                  ? 'text-brand-super-white border-l-2 border-brand-gold pl-3'
+                  : 'text-brand-super-white/80'
               }`}
             >
               {link.label}

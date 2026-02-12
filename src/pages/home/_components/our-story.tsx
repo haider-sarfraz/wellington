@@ -1,5 +1,6 @@
 import { Description } from '../../../components/design-system/description';
 import { Heading } from '../../../components/design-system/heading';
+import { FramedImage } from '../../../components/design-system/framed-image';
 import ourStoryImage from '../../../assets/images/our-story.png';
 
 
@@ -19,28 +20,11 @@ const OurStory: React.FC = () => {
           </div>
 
           {/* Right Side - Image with Golden Border */}
-          <div className="flex justify-center md:justify-end">
-            <div className="relative max-w-md h-[623px] w-[415px]">
-              {/* Golden Frame (behind the image) */}
-              <div 
-                className="absolute top-0 right-0 w-[379px] h-full"
-                style={{
-                  border: '4px solid #F9D57A',
-                  zIndex: 1,
-                }}
-              />
-              
-              {/* Image (in front, shifted left) */}
-              <img 
-                src={ourStoryImage} 
-                alt="Bride with elegant wedding dress" 
-                className="absolute top-[15px] right-[14px] w-[415px] h-full object-cover shadow-2xl"
-                style={{
-                  zIndex: 2,
-                }}
-              />
-            </div>
-          </div>
+          <FramedImage 
+            src={ourStoryImage}
+            alt="Bride with elegant wedding dress"
+            direction="right"
+          />
         </div>
       </div>
     </section>

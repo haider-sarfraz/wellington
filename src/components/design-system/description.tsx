@@ -8,14 +8,10 @@ export const Description = ({
   className?: string
 }) => (
   <p
-    className={cn('w-[75%]', className)}
+    className={cn('w-[75%] font-public-sans font-light leading-[28px] text-[28px]', className)}
     style={{
       color: 'rgba(84, 84, 84, 1)',
-      fontFamily: '"Public Sans"',
-      fontSize: '28px',
       fontStyle: 'normal',
-      fontWeight: 300,
-      lineHeight: '28px',
       letterSpacing: '-0.84px',
     }}
   >
