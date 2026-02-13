@@ -1,5 +1,6 @@
 import homePageCover from '../../../assets/images/home-page-cover.png';
 import logo from '../../../assets/images/logo.png';
+import { cn } from '../../../utils/cn';
 
 const Hero: React.FC = () => {
   return (
@@ -15,7 +16,11 @@ const Hero: React.FC = () => {
       
       {/* Layered Arched Overlay */}
       <div 
-        className="flex justify-center md:px-8 px-4 relative z-10"
+        className={cn(
+          "flex justify-center md:px-8 px-4 relative z-10",
+          "md:h-[83%] md:w-[45%]",
+          "lg:h-[83%] lg:w-[45%]"
+        )}
         style={{
           height: '83%',
           width: '45%',

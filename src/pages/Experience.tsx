@@ -96,7 +96,7 @@ const Experience = () => {
           />
         </div>
 
-        <div className="flex flex-col items-end w-[60%] mt-[80px]">
+        <div className="flex flex-col items-end w-[60%] mt-[40px]">
           <span className="font-brittany text-brand-charcoal text-[96px] leading-[137px]">
             4.
           </span>
