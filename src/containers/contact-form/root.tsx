@@ -5,7 +5,7 @@ import { cn } from '../../utils/cn';
 
 export const ContactForm = ({
   className,
-  variant
+  variant= "home-page"
 }: {
   variant?: 'contact-us' | "home-page";
   className?: string;
@@ -34,11 +34,26 @@ export const ContactForm = ({
     
       <div className="max-w-7xl mx-auto z-10 flex flex-col gap-[50px]">
         {/* Header Section */}
-        <div className="mb-12 mt-8 flex flex-col items-center justify-center gap-[80px]">
-          <Heading className='text-brand-super-white'>
+        <div className={cn(
+          "mb-12 mt-8 flex flex-col gap-[80px]", {
+            "items-start": variant === "home-page",
+            "items-center justify-center": variant === "contact-us",
+          }
+        )}>
+          <Heading
+            className={cn({
+              "text-brand-charcoal": variant === "home-page",
+              "text-brand-super-white": variant === "contact-us",
+            })}
+          >
             Contact Us
           </Heading>
-          <Description className='text-brand-super-white'>
+          <Description
+            className={cn({
+              "text-brand-charcoal": variant === "home-page",
+              "text-brand-super-white": variant === "contact-us",
+            })}
+          >
             Begin creating the heirloom your family will cherish.
           </Description>
         </div>
