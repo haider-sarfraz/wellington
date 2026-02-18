@@ -1,6 +1,15 @@
-import { FacebookIcon } from './icon-components/FacebookIcon';
-import { LinkedInIcon } from './icon-components/LinkedInIcon';
-import { TwitterIcon } from './icon-components/TwitterIcon';
+import React from 'react';
+import { InstagramIcon } from './icon-components/InstagramIcon';
+
+const HOURS_OF_OPERATION: { day: string; open?: string; close?: string }[] = [
+  { day: 'Monday' },
+  { day: 'Tuesday', open: '9am', close: '5pm' },
+  { day: 'Wednesday', open: '9am', close: '5pm' },
+  { day: 'Thursday', open: '9am', close: '5pm' },
+  { day: 'Friday', open: '9am', close: '5pm' },
+  { day: 'Saturday' },
+  { day: 'Sunday' },
+];
 
 export const Footer = () => {
   return (
@@ -19,22 +28,49 @@ export const Footer = () => {
         
         {/* Contact Information Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-center md:text-left md:pl-[10rem]">
-          {/* Email */}
+          {/* Address */}
           <div>
-            <h3 className="opacity-90 text-sm font-public-sans font-normal mb-2">Email Address</h3>
-            <p className="opacity-80 text-sm font-public-sans font-extralight">help@info.com</p>
+            <h3 className="opacity-90 text-sm font-public-sans font-normal mb-2">Address</h3>
+            <p className="opacity-80 text-sm font-public-sans font-extralight">
+              1 Mid America Plaza<br />
+              3rd Floor<br />
+              Oakbrook Terrace, Illinois 60181
+            </p>
           </div>
           
           {/* Phone */}
           <div>
             <h3 className="opacity-90 text-sm font-public-sans font-normal mb-2">Phone Number</h3>
-            <p className="opacity-80 text-sm font-public-sans font-extralight">+1800 099403 33</p>
+            <p className="opacity-80 text-sm font-public-sans font-extralight">(630) 277-9162</p>
           </div>
           
           {/* Hours */}
           <div>
-            <h3 className="opacity-90 text-sm font-public-sans font-normal mb-2">Assistance hours:</h3>
-            <p className="opacity-80 text-sm font-public-sans font-extralight">Monday - Friday 6 am to 8 pm EST</p>
+            <h3 className="opacity-90 text-sm font-public-sans font-normal mb-2">Hours of Operation</h3>
+            <div className="grid grid-cols-3 gap-x-4 gap-y-1 text-left opacity-80 text-sm font-public-sans font-extralight">
+              <span className="font-semibold mb-2">Day</span>
+              <span className="font-semibold mb-2">Opens at</span>
+              <span className="font-semibold mb-2 text-right">Closes at</span>
+              {HOURS_OF_OPERATION.map(({ day, open, close }) => {
+                const isClosed = !open;
+                return (
+                  <React.Fragment key={day}>
+                    <span>{day}</span>
+                    {isClosed ? (
+                      <>
+                        <span className="col-span-2 text-right">Closed</span>
+                        <span className="hidden" />
+                      </>
+                    ) : (
+                      <>
+                        <span>{open}</span>
+                        <span className="text-right">{close}</span>
+                      </>
+                    )}
+                  </React.Fragment>
+                );
+              })}
+            </div>
           </div>
         </div>
         
@@ -46,24 +82,12 @@ export const Footer = () => {
           <p className="text-sm font-public-sans font-normal text-center md:w-3/4 w-full md:ml-[25%] ml-0">All Rights Reserved.</p>
           
           {/* Social Media Icons */}
-          <div className="flex gap-4 w-1/4 flex items-center justify-end">
-            <FacebookIcon 
-              width={40} 
-              height={40} 
+          <div className="flex gap-4 w-1/4 items-center justify-end">
+            <InstagramIcon
+              width={40}
+              height={40}
               className="hover:opacity-80 transition-opacity cursor-pointer"
-              onClick={() => window.open('https://facebook.com', '_blank')}
-            />
-            <LinkedInIcon 
-              width={40} 
-              height={40} 
-              className="hover:opacity-80 transition-opacity cursor-pointer"
-              onClick={() => window.open('https://linkedin.com', '_blank')}
-            />
-            <TwitterIcon 
-              width={40} 
-              height={40} 
-              className="hover:opacity-80 transition-opacity cursor-pointer"
-              onClick={() => window.open('https://twitter.com', '_blank')}
+              onClick={() => window.open('https://www.instagram.com/weddings_by_jeremy?igsh=MTdkaWRmczRmYmZiaw==', '_blank')}
             />
           </div>
         </div>

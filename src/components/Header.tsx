@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logoWhite from '../assets/images/Transparent name 1 1.png';
-import { FacebookIcon, InstagramIcon, TwitterIcon } from './icon-components';
+import { InstagramIcon } from './icon-components';
 import { useIsMobile } from '../hooks/useIsobile';
 
 const Header = () => {
@@ -75,23 +75,11 @@ const Header = () => {
           <div className="flex items-center md:gap-4 gap-2 sm:gap-5">
             {/* Social Icons */}
             <div className="flex items-center md:gap-2 gap-1 sm:gap-3">
-              <FacebookIcon
-                width={isMobile ? 20 : 40}
-                height={isMobile ? 20 : 40}
-                className="rounded-full transition-colors"
-                onClick={() => handleSocialClick('https://facebook.com')}
-              />
               <InstagramIcon
                 width={isMobile ? 20 : 40}
                 height={isMobile ? 20 : 40}
                 className="rounded-full transition-colors"
-                onClick={() => handleSocialClick('https://instagram.com')}
-              />
-              <TwitterIcon
-                width={isMobile ? 20 : 40}
-                height={isMobile ? 20 : 40}
-                className="rounded-full transition-colors"
-                onClick={() => handleSocialClick('https://twitter.com')}
+                onClick={() => handleSocialClick('https://www.instagram.com/weddings_by_jeremy?igsh=MTdkaWRmczRmYmZiaw==')}
               />
             </div>
             
