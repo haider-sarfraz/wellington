@@ -15,15 +15,15 @@ export const Gallery = () => {
   };
 
   return (
-    <section id="gallery-section" className="pt-20 pb-40 flex flex-col items-start gap-10">
-      <Heading className="ml-[13%]">
+    <section id="gallery-section" className="md:pt-20 md:pb-40 pt-10 pb-20 flex flex-col md:items-start items-center gap-10">
+      <Heading className="md:ml-[13%]">
         Gallery
       </Heading>
-      <div className="flex flex-col items-center mt-[62px] gap-4">
+      <div className="flex flex-col items-center md:mt-[62px] gap-4">
         <SubSectionHeading>
           Where Love Becomes Art.
         </SubSectionHeading>
-        <div className="flex flex-col gap-8 items-center text-center">
+        <div className="flex flex-col gap-8 items-center text-center px-6 md:px-0">
           <Description>
             Our portfolio is a curated collection of stories—each one distinct, intimate, and deeply personal. Every frame reflects our commitment to timeless beauty, emotional depth, and refined storytelling.
           </Description>
@@ -36,28 +36,24 @@ export const Gallery = () => {
       {/* TODO: Center text vertically */}
       <button
         type="button"
-        className="w-[204px] h-[52px] bg-brand-charcoal text-brand-super-white font-hatton text-lg font-bold rounded-full self-center"
-        style={{
-          fontFamily: '"Public Sans"',
-          fontSize: '28px',
-          fontStyle: 'normal',
-          fontWeight: 300,
-          lineHeight: '100%',
-          letterSpacing: '-0.6px',
-        }}
+        className="w-[100px] h-[30px] md:w-[204px] md:h-[52px] bg-brand-charcoal
+        text-brand-super-white font-public-sans md:text-lg text-[15px] font-normal 
+          rounded-full self-center
+          md:tracking-[-0.6px] tracking-[-0.45px]
+          leading-[100%]"
         onClick={handleGalleryClick}
       >
         Gallery
       </button>
 
-      <div className="w-full flex justify-center mt-12 px-[13%]">
+      <div className="w-full flex justify-center md:mt-12 mt-6 px-[13%]">
         <div className="w-full">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[200px]">
+          <div className="grid grid-cols-12 md:gap-6 gap-4 auto-rows-[200px]">
             
             <CollageBasic1 />
             
             {/* pictures with play icon*/}
-            <div className="row-span-2 col-span-8 overflow-hidden relative">
+            <div className="row-span-1 md:row-span-2 md:col-span-8 col-span-12 overflow-hidden relative">
               <img
                 src={collagePic7}
                 alt="Bride and Groom Dancing"
@@ -73,7 +69,7 @@ export const Gallery = () => {
               </div>
             </div>
 
-            <div className="col-span-4 row-span-2 overflow-hidden relative">
+            <div className="md:col-span-4 col-span-12 row-span-1 md:row-span-2 overflow-hidden relative">
               <img
                 src={collagePic8}
                 alt="Bride and Groom in Dress Code"

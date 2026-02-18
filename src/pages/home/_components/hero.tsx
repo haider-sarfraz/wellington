@@ -18,13 +18,14 @@ const Hero: React.FC = () => {
       <div 
         className={cn(
           "flex justify-center md:px-8 px-4 relative z-10",
+          "h-[65%] w-[70%]",
           "md:h-[83%] md:w-[45%]",
           "lg:h-[83%] lg:w-[45%]"
         )}
-        style={{
-          height: '83%',
-          width: '45%',
-        }}
+        // style={{
+        //   height: '83%',
+        //   width: '45%',
+        // }}
       >
         {/* Outer Layer - Border with rounded top */}
         <div 
@@ -54,28 +55,28 @@ const Hero: React.FC = () => {
               }}
             >
               {/* Logo */}
-              <div className="mt-[120px]">
+              <div className="md:mt-[120px] mt-[80px]">
                 <img 
                   src={logo} 
                   alt="Wellington Jade Studio Logo" 
-                  className="object-contain"
-                  style={{
-                    width: '200px',
-                    height: '200px',
-                    marginTop: '120px',
-                  }}
+                  className="object-contain w-[100px] -mt-[20px] h-[85px] md:w-[200px] md:h-[200px] md:mt-[120px]"
+                  // style={{
+                  //   width: '200px',
+                  //   height: '200px',
+                  //   marginTop: '120px',
+                  // }}
                 />
               </div>
               
               {/* Tagline */}
-              <div className="text-white text-center text-lg md:text-xl font-carla uppercase tracking-wide">
+              <div className="text-white text-center text-sm md:text-xl font-carla uppercase tracking-wide">
                 <p 
                   className="leading-none mt-5"
                   style={{
                     color: '#FFF',
                     textAlign: 'center',
                     fontFamily: '"PP Hatton"',
-                    fontSize: '28px',
+                    // fontSize: '28px',
                     fontStyle: 'normal',
                     fontWeight: 500,
                     lineHeight: '100%',

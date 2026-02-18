@@ -9,7 +9,7 @@ export const CollageBasic1 = () => {
   return (
     <>
       {/* Bridesmaids - Large */}
-      <div className="row-span-2 col-span-8 overflow-hidden">
+      <div className="row-span-1 md:row-span-2 col-span-12 md:col-span-8 overflow-hidden">
         <img
           src={collagePic1}
           alt="Bridesmaids"
@@ -18,7 +18,7 @@ export const CollageBasic1 = () => {
       </div>
 
       {/* Bride Back Pose - Small */}
-      <div className="col-span-4 row-span-2 overflow-hidden">
+      <div className="col-span-7 md:col-span-4 row-span-1 md:row-span-2  overflow-hidden">
         <img
           src={collagePic2}
           alt="Bride Back"
@@ -27,7 +27,7 @@ export const CollageBasic1 = () => {
       </div>
 
       {/* Walking Couple - Medium */}
-      <div className="row-span-2 col-span-3 overflow-hidden">
+      <div className="row-span-1 md:row-span-2 md:col-span-3 col-span-5 overflow-hidden">
         <img
           src={collagePic3}
           alt="Walking Couple"
@@ -36,7 +36,7 @@ export const CollageBasic1 = () => {
       </div>
 
       {/* Flower Close Portrait - Large */}
-      <div className="row-span-3 col-span-9 overflow-hidden">
+      <div className="row-span-1 md:row-span-3 md:col-span-9 col-span-12 overflow-hidden">
         <img
           src={collagePic4}
           alt="Portrait"
@@ -45,7 +45,7 @@ export const CollageBasic1 = () => {
       </div>
 
       {/* Bride Outdoor - Small */}
-      <div className="row-span-3 col-span-3 overflow-hidden">
+      <div className="row-span-1 md:row-span-3 col-span-4 md:col-span-3 overflow-hidden">
         <img
           src={collagePic5}
           alt="Outdoor Bride"
@@ -54,7 +54,7 @@ export const CollageBasic1 = () => {
       </div>
 
       {/* Piano Group - Large */}
-      <div className="row-span-2 col-span-9 overflow-hidden">
+      <div className="row-span-1 md:row-span-2 col-span-8 md:col-span-9 overflow-hidden">
         <img
           src={collagePic6}
           alt="Piano Group"

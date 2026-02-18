@@ -11,8 +11,8 @@ import playIcon from "../assets/images/play-icon.png";
 const Gallery = () => {
   return (
     <>
-    <div className="pb-10 pt-40 px-4 sm:px-6 lg:px-8">
-      <Heading className="ml-[13%]">
+    <div className="pb-10 md:pt-40 pt-[100px] md:px-4 px-6 sm:px-6 lg:px-8">
+      <Heading className="md:ml-[13%] ml-0">
         Gallery
       </Heading>
       <div className="flex flex-col items-center mt-[62px] gap-4">
@@ -27,12 +27,12 @@ const Gallery = () => {
       </div>
     </div>
      <div className="w-full flex justify-center mb-12 px-[13%]">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[200px]">
+      <div className="grid grid-cols-12 gap-6 auto-rows-[200px]">
         <CollageBasic1 />
         <CollageBasic2 />
          
          {/* pictures with play icon*/}
-         <div className="row-span-3 col-span-12 overflow-hidden relative">
+         <div className="md:row-span-3 row-span-1 col-span-12 overflow-hidden relative">
            <img
              src={collagePic7}
              alt="Bride and Groom Dancing"
@@ -48,7 +48,7 @@ const Gallery = () => {
            </div>
          </div>
 
-         <div className="col-span-4 row-span-2 overflow-hidden relative">
+         <div className="md:col-span-4 md:row-span-2 row-span-1 col-span-6 overflow-hidden relative">
            <img
              src={collagePic8}
              alt="Bride and Groom in Dress Code"
@@ -64,7 +64,7 @@ const Gallery = () => {
            </div>
          </div>
 
-         <div className="col-span-8 row-span-2 overflow-hidden relative">
+         <div className="md:col-span-8 md:row-span-2 row-span-1 col-span-6 overflow-hidden relative">
            <img
              src={collagePic13}
              alt="Bride and Groom in Dress Code"

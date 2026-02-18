@@ -8,16 +8,12 @@ export const SubSectionHeading = ({
   className?: string;
 }) => (
   <h2 
-    className={cn('text-left', className)}
-    style={{
-      color: 'rgba(84, 84, 84, 1)',
-      fontFamily: "PP Hatton",
-      fontSize: '28px',
-      fontStyle: 'normal',
-      fontWeight: 400,
-      lineHeight: '28px',
-      letterSpacing: '-0.84px',
-    }}
+    className={cn(
+      'md:text-left text-center md:text-[28px] text-[18px] text-brand-charcoal',
+      'tracking-[-0.84px]',
+      'font-hatton font-normal',
+      'leading-[28px]',
+      className)}
   >
     {children}
   </h2>

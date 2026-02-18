@@ -1,10 +1,12 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logoWhite from '../assets/images/Transparent name 1 1.png';
 import { FacebookIcon, InstagramIcon, TwitterIcon } from './icon-components';
+import { useIsMobile } from '../hooks/useIsobile';
 
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -30,9 +32,8 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-black-overlay">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-4">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-black-overlay w-[]">
+        <div className="flex items-center justify-between px-3 sm:px-6 lg:px-8 py-4 w-full">
           {/* Left Navigation - Desktop */}
           <nav className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
@@ -56,7 +57,7 @@ const Header = () => {
             className="lg:hidden text-brand-super-white p-2"
             aria-label="Menu"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <svg className="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
@@ -66,29 +67,29 @@ const Header = () => {
             <img
               src={logoWhite}
               alt="Wellington Jade Studio - Where Moments Become Memories"
-              className="h-6 sm:h-7 md:h-8 w-auto object-contain"
+              className="h-5 sm:h-7 md:h-8 w-auto object-contain"
             />
           </Link>
 
           {/* Right Side - Social & CTA */}
-          <div className="flex items-center gap-4 sm:gap-5">
+          <div className="flex items-center md:gap-4 gap-2 sm:gap-5">
             {/* Social Icons */}
-            <div className="flex items-center gap-2 sm:gap-3">
+            <div className="flex items-center md:gap-2 gap-1 sm:gap-3">
               <FacebookIcon
-                width={40}
-                height={40}
+                width={isMobile ? 20 : 40}
+                height={isMobile ? 20 : 40}
                 className="rounded-full transition-colors"
                 onClick={() => handleSocialClick('https://facebook.com')}
               />
               <InstagramIcon
-                width={40}
-                height={40}
+                width={isMobile ? 20 : 40}
+                height={isMobile ? 20 : 40}
                 className="rounded-full transition-colors"
                 onClick={() => handleSocialClick('https://instagram.com')}
               />
               <TwitterIcon
-                width={40}
-                height={40}
+                width={isMobile ? 20 : 40}
+                height={isMobile ? 20 : 40}
                 className="rounded-full transition-colors"
                 onClick={() => handleSocialClick('https://twitter.com')}
               />
@@ -100,7 +101,6 @@ const Header = () => {
             </button>
           </div>
         </div>
-      </div>
 
       {/* Mobile Navigation - Hidden by default, would need state management for toggle */}
       <div className="lg:hidden hidden border-t border-brand-super-white/20">

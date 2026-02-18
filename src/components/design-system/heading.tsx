@@ -8,15 +8,12 @@ export const Heading = ({
   className?: string;
 }) => (
   <h2 
-    className={cn('text-left font-brittany text-brand-charcoal', className)}
-    style={{
-      fontFamily: '"Brittany Signature"',
-      fontSize: '64px',
-      fontStyle: 'normal',
-      fontWeight: 300,
-      lineHeight: '64px',
-      letterSpacing: '-1.92px',
-    }}
+    className={cn(
+      'md:text-left text-center font-brittany text-brand-charcoal',
+      'text-[32px] sm:text-10 md:text-[64px] leading-[40px] md:leading-[64px]',
+      'tracking-[-1.92px]',
+      'font-brittany font-light',
+      className)}
   >
     {children}
   </h2>

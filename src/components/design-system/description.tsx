@@ -8,7 +8,7 @@ export const Description = ({
   className?: string
 }) => (
   <p
-    className={cn('w-[75%] font-public-sans font-light leading-[28px] text-[28px] text-brand-charcoal', className)}
+    className={cn('md:w-[75%] w-full text-[18px] font-public-sans font-light leading-[28px] md:text-[28px] text-brand-charcoal', className)}
     style={{
       letterSpacing: '-0.84px',
     }}

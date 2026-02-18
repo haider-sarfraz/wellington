@@ -35,7 +35,7 @@ export const ContactForm = ({
       <div className="max-w-7xl mx-auto z-10 flex flex-col gap-[50px]">
         {/* Header Section */}
         <div className={cn(
-          "mb-12 mt-8 flex flex-col gap-[80px]", {
+          "md:mb-12 md:mt-8 flex flex-col md:gap-[80px] gap-10", {
             "items-start": variant === "home-page",
             "items-center justify-center": variant === "contact-us",
           }
@@ -61,37 +61,37 @@ export const ContactForm = ({
         {/* Contact Form */}
         <form className="space-y-6">
           {/* Row 1: Your Name and Email Address */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-            <div className="col-span-7 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-12 md:gap-8">
+            <div className="md:col-span-7 col-span-12 md:mb-12">
               <input
                 type="text"
                 placeholder="Your Name"
-                className={cn("w-full bg-transparent border-0 border-b-2 border-brand-charcoal focus:outline-none focus:border-brand-charcoal pb-8 placeholder:text-brand-charcoal font-inter text-2xl font-normal leading-9", variant === 'contact-us' ? 'text-brand-super-white placeholder:text-brand-super-white' : 'text-brand-charcoal')}
+                className={cn("w-full bg-transparent border-0 md:border-b-2 border-b-[1.5px] border-brand-charcoal focus:outline-none focus:border-brand-charcoal pb-1 md:pb-8 placeholder:text-brand-charcoal font-inter md:text-2xl text-xl font-normal leading-9", variant === 'contact-us' ? 'text-brand-super-white placeholder:text-brand-super-white' : 'text-brand-charcoal')}
               />
             </div>
-            <div className="col-span-5">
+            <div className="md:col-span-5 col-span-12 pt-7 md:pt-0">
               <input
                 type="email"
                 placeholder="Email Address"
-                className={cn("w-full bg-transparent border-0 border-b-2 border-brand-charcoal focus:outline-none focus:border-brand-charcoal pb-8 placeholder:text-brand-charcoal font-inter text-2xl font-normal leading-9", variant === 'contact-us' ? 'text-brand-super-white placeholder:text-brand-super-white' : 'text-brand-charcoal')}
+                className={cn("w-full bg-transparent border-0 md:border-b-2 border-b-[1.5px] border-brand-charcoal focus:outline-none focus:border-brand-charcoal pb-1 md:pb-8 placeholder:text-brand-charcoal font-inter md:text-2xl text-xl font-normal leading-9", variant === 'contact-us' ? 'text-brand-super-white placeholder:text-brand-super-white' : 'text-brand-charcoal')}
               />
             </div>
           </div>
   
           {/* Row 2: Your Fiance's Name and Wedding date */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-            <div className="col-span-7 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-12 md:gap-8">
+            <div className="md:col-span-7 col-span-12 md:mb-10">
               <input
                 type="text"
                 placeholder="Your Fiance's Name"
-                className={cn("w-full bg-transparent border-0 border-b-2 border-brand-charcoal focus:outline-none focus:border-brand-charcoal pb-8 placeholder:text-brand-charcoal font-inter text-2xl font-normal leading-9", variant === 'contact-us' ? 'text-brand-super-white placeholder:text-brand-super-white' : 'text-brand-charcoal')}
+                className={cn("w-full bg-transparent border-0 md:border-b-2 border-b-[1.5px] border-brand-charcoal focus:outline-none focus:border-brand-charcoal pb-1 md:pb-8 placeholder:text-brand-charcoal font-inter md:text-2xl text-xl font-normal leading-9", variant === 'contact-us' ? 'text-brand-super-white placeholder:text-brand-super-white' : 'text-brand-charcoal')}
               />
             </div>
-            <div className="col-span-5">
+            <div className="md:col-span-5 col-span-12 pt-7 md:pt-0">
               <input
                 type="text"
                 placeholder="Wedding date"
-                className={cn("w-full bg-transparent border-0 border-b-2 border-brand-charcoal focus:outline-none focus:border-brand-charcoal pb-8 placeholder:text-brand-charcoal font-inter text-2xl font-normal leading-9", variant === 'contact-us' ? 'text-brand-super-white placeholder:text-brand-super-white' : 'text-brand-charcoal')}
+                className={cn("w-full bg-transparent border-0 md:border-b-2 border-b-[1.5px] border-brand-charcoal focus:outline-none focus:border-brand-charcoal pb-1 md:pb-8 placeholder:text-brand-charcoal font-inter md:text-2xl text-xl font-normal leading-9", variant === 'contact-us' ? 'text-brand-super-white placeholder:text-brand-super-white' : 'text-brand-charcoal')}
               />
             </div>
           </div>
@@ -100,15 +100,15 @@ export const ContactForm = ({
           <div>
             <textarea
               placeholder="Message"
-              className={cn("w-full bg-transparent border-0 border-b-2 border-brand-charcoal focus:outline-none focus:border-brand-charcoal pb-8 placeholder:text-brand-charcoal font-inter text-2xl font-normal leading-9", variant === 'contact-us' ? 'text-brand-super-white placeholder:text-brand-super-white' : 'text-brand-charcoal')}
+              className={cn("w-full bg-transparent border-0 md:border-b-2 border-b-[1.5px] border-brand-charcoal focus:outline-none focus:border-brand-charcoal pb-1 md:pb-8 placeholder:text-brand-charcoal font-inter md:text-2xl text-xl font-normal leading-[1rem]", variant === 'contact-us' ? 'text-brand-super-white placeholder:text-brand-super-white' : 'text-brand-charcoal')}
             />
           </div>
   
           {/* Submit Button */}
-          <div className="flex justify-center pt-10">
+          <div className="flex justify-center md:pt-10">
             <button
               type="button"
-              className={cn("px-8 py-3 rounded-full h-[91px] w-[358px] font-public-sans font-normal text-[22px]", variant === 'contact-us' ? 'bg-brand-green-cyan text-brand-charcoal' : 'bg-brand-cyan-blue text-brand-white')}
+              className={cn("px-8 md:py-3 rounded-full md:h-[91px] h-[50px] md:w-[358px] w-[250px] font-public-sans font-normal md:text-[22px] text-[16px]", variant === 'contact-us' ? 'bg-brand-green-cyan text-brand-charcoal' : 'bg-brand-cyan-blue text-brand-white')}
             >
               Leave us a Message →
             </button>

@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer className="w-full bg-[#556d70] text-white pt-10 pb-6 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Main Heading */}
-        <h2 className="text-center text-4xl md:text-5xl font-hatton mb-6 text-brand-super-white">
+        <h2 className="text-center text-2xl md:text-5xl font-hatton mb-6 text-brand-super-white">
           Where your most cherished<br />moments begin.
         </h2>
         
@@ -43,7 +43,7 @@ export const Footer = () => {
         
         {/* Footer Bottom - Copyright and Social Icons */}
         <div className="flex flex-col md:flex-row items-center gap-4">
-          <p className="text-sm font-public-sans font-normal text-center w-3/4 ml-[25%]">All Rights Reserved.</p>
+          <p className="text-sm font-public-sans font-normal text-center md:w-3/4 w-full md:ml-[25%] ml-0">All Rights Reserved.</p>
           
           {/* Social Media Icons */}
           <div className="flex gap-4 w-1/4 flex items-center justify-end">
