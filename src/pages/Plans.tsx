@@ -4,7 +4,6 @@ import { Heading } from "../components/design-system/heading";
 import brideOutdoor from "../assets/images/gallery-pictures/collage-pic-5.jpg";
 import coupleOutdoor from "../assets/images/gallery-pictures/collage-pic-3.jpg";
 import bouqueHolderIndoor from "../assets/images/gallery-pictures/collage-pic-2.jpg";
-import heirloom from "../assets/images/gallery-pictures/collage-pic-12.png";
 import brideWithRosesPhoto from "../assets/images/gallery-pictures/bride-with-rose-front-photo.png";
 import { SubSectionHeading } from "../components/design-system/sub-section-heading";
 import { useIsMobile } from "../hooks/useIsobile";
