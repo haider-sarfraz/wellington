@@ -9,7 +9,6 @@ import {
   SheetContent,
   SheetTitle,
   SheetHeader,
-  SheetClose,
 } from '@/components/ui/sheet';
 
 const Header = () => {
