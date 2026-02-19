@@ -1,12 +1,22 @@
+import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logoWhite from '../assets/images/Transparent name 1 1.png';
 import { InstagramIcon } from './icon-components';
 import { useIsMobile } from '../hooks/useIsobile';
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetTitle,
+  SheetHeader,
+  SheetClose,
+} from '@/components/ui/sheet';
 
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const isMobile = useIsMobile();
+  const [sheetOpen, setSheetOpen] = useState(false);
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -21,6 +31,7 @@ const Header = () => {
   };
 
   const handleLetsTalkClick = () => {
+    setSheetOpen(false);
     navigate('/contact-us');
   };
 
@@ -51,16 +62,62 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            type="button"
-            className="lg:hidden text-brand-super-white p-2"
-            aria-label="Menu"
-          >
-            <svg className="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+          {/* Mobile Menu */}
+          <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
+            <SheetTrigger asChild>
+              <button
+                type="button"
+                className="lg:hidden text-brand-super-white p-2"
+                aria-label="Menu"
+              >
+                <svg className="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </SheetTrigger>
+            <SheetContent side="left" className="bg-brand-black-overlay backdrop-blur-md border-brand-super-white/10 w-[280px] p-0">
+              <SheetHeader className='px-6 pt-4'>
+                <SheetTitle className='text-brand-super-white font-bold flex items-center justify-between'>
+                  <span className='text-md'>Wellington Jade Studio</span>
+                  <InstagramIcon
+                    width={28}
+                    height={28}
+                    className="rounded-full transition-colors"
+                    onClick={() => handleSocialClick('https://www.instagram.com/weddings_by_jeremy?igsh=MTdkaWRmczRmYmZiaw==')}
+                  />
+                </SheetTitle>
+              </SheetHeader>
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+              <div className="flex flex-col justify-between h-full pt-4 px-6 pb-6">
+                <nav className="flex flex-col gap-2">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.path}
+                      to={link.path}
+                      onClick={() => setSheetOpen(false)}
+                      className={`font-public-sans font-medium text-base tracking-tight py-3 px-3 rounded-md transition-colors ${
+                        isActive(link.path)
+                          ? 'text-brand-super-white bg-brand-super-white/10 border-l-2 border-brand-gold'
+                          : 'text-brand-super-white/80 hover:text-brand-super-white hover:bg-brand-super-white/5'
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </nav>
+
+                <div className="flex flex-col gap-4 pb-10">
+                  <button
+                    type="button"
+                    className="bg-brand-super-white hover:bg-brand-super-white/90 text-brand-charcoal font-public-sans font-medium px-6 py-3 rounded-full text-base tracking-tight transition-colors"
+                    onClick={handleLetsTalkClick}
+                  >
+                    Let's Talk
+                  </button>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
 
           {/* Center Logo */}
           <Link to="/" className="flex-shrink-0">
@@ -82,35 +139,15 @@ const Header = () => {
                 onClick={() => handleSocialClick('https://www.instagram.com/weddings_by_jeremy?igsh=MTdkaWRmczRmYmZiaw==')}
               />
             </div>
-            
+
             {/* Let's Talk Button */}
             <button type="button" className="hidden sm:flex bg-brand-super-white hover:bg-brand-super-white/90 text-brand-charcoal font-public-sans font-medium px-6 py-3 rounded-full text-base tracking-tight transition-colors" onClick={handleLetsTalkClick}>
               Let's Talk
             </button>
           </div>
         </div>
-
-      {/* Mobile Navigation - Hidden by default, would need state management for toggle */}
-      <div className="lg:hidden hidden border-t border-brand-super-white/20">
-        <nav className="px-4 py-4 space-y-3">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={`block font-public-sans font-medium text-base tracking-tight py-2 ${
-                isActive(link.path)
-                  ? 'text-brand-super-white border-l-2 border-brand-gold pl-3'
-                  : 'text-brand-super-white/80'
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-      </div>
     </header>
   );
 };
 
 export default Header;
-

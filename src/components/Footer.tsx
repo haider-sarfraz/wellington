@@ -82,7 +82,7 @@ export const Footer = () => {
           <p className="text-sm font-public-sans font-normal text-center md:w-3/4 w-full md:ml-[25%] ml-0">All Rights Reserved.</p>
           
           {/* Social Media Icons */}
-          <div className="flex gap-4 w-1/4 items-center justify-end">
+          <div className="flex gap-4 w-1/4 items-center justify-center md:justify-end">
             <InstagramIcon
               width={40}
               height={40}
