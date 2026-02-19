@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
   return (
     <section className="relative w-full h-screen flex items-end justify-center overflow-hidden">
       {/* Background Image with Grayscale Filter */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${homePageCover})`,
@@ -18,14 +18,11 @@ const Hero: React.FC = () => {
       <div 
         className={cn(
           "flex justify-center md:px-8 px-4 relative z-10",
-          "h-[65%] w-[70%]",
-          "md:h-[83%] md:w-[45%]",
-          "lg:h-[83%] lg:w-[45%]"
+          "h-[50%] w-[80%]",
+          "h-[50%] w-[80%]",
+          "md:h-[70%] md:w-[80%]",
+          "xl:h-[70%] xl:max-w-[850px]"
         )}
-        // style={{
-        //   height: '83%',
-        //   width: '45%',
-        // }}
       >
         {/* Outer Layer - Border with rounded top */}
         <div 
@@ -55,18 +52,11 @@ const Hero: React.FC = () => {
               }}
             >
               {/* Logo */}
-              <div className="md:mt-[120px] mt-[80px]">
-                <img 
-                  src={logo} 
-                  alt="Wellington Jade Studio Logo" 
-                  className="object-contain w-[100px] -mt-[20px] h-[85px] md:w-[200px] md:h-[200px] md:mt-[120px]"
-                  // style={{
-                  //   width: '200px',
-                  //   height: '200px',
-                  //   marginTop: '120px',
-                  // }}
-                />
-              </div>
+              <img 
+                src={logo} 
+                alt="Wellington Jade Studio Logo" 
+                className="object-contain w-[150px] mt-[80px] h-[200px] md:w-[200px] md:mt-[240px]"
+              />
               
               {/* Tagline */}
               <div className="text-white text-center text-sm md:text-xl font-carla uppercase tracking-wide">
@@ -76,7 +66,6 @@ const Hero: React.FC = () => {
                     color: '#FFF',
                     textAlign: 'center',
                     fontFamily: '"PP Hatton"',
-                    // fontSize: '28px',
                     fontStyle: 'normal',
                     fontWeight: 500,
                     lineHeight: '100%',
