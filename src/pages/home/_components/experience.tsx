@@ -37,6 +37,7 @@ export const Experience = () => {
           // className="absolute h-full object-cover w-full"
           className="md:h-[770px] h-[326px] object-cover w-[215px] md:w-full"
           src={ExperienceImage}
+          loading="lazy"
           style={{
             zIndex: 2,
           }}

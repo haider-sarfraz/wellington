@@ -14,6 +14,7 @@ export const CollageBasic1 = () => {
           src={collagePic1}
           alt="Bridesmaids"
           className="w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
 
@@ -23,6 +24,7 @@ export const CollageBasic1 = () => {
           src={collagePic2}
           alt="Bride Back"
           className="w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
 
@@ -32,6 +34,7 @@ export const CollageBasic1 = () => {
           src={collagePic3}
           alt="Walking Couple"
           className="w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
 
@@ -41,6 +44,7 @@ export const CollageBasic1 = () => {
           src={collagePic4}
           alt="Portrait"
           className="w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
 
@@ -50,6 +54,7 @@ export const CollageBasic1 = () => {
           src={collagePic5}
           alt="Outdoor Bride"
           className="w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
 
@@ -59,6 +64,7 @@ export const CollageBasic1 = () => {
           src={collagePic6}
           alt="Piano Group"
           className="w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
     </>

@@ -88,10 +88,11 @@ export const MobileFramedImage = ({
         />
         
         {/* Image (in front, shifted) */}
-        <img 
+        <img
           src={src}
           alt={alt}
           className={mobileImageVariants({ direction })}
+          loading="lazy"
           style={{
             width,
             height: '100%',

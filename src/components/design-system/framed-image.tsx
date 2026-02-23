@@ -88,10 +88,11 @@ export const FramedImage = ({
         />
         
         {/* Image (in front, shifted) */}
-        <img 
+        <img
           src={src}
           alt={alt}
           className={imageVariants({ direction })}
+          loading="lazy"
           style={{
             width,
             height: '100%',

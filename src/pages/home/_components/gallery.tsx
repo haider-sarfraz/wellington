@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Description } from "../../../components/design-system/description"
 import { Heading } from "../../../components/design-system/heading"
 import { SubSectionHeading } from "../../../components/design-system/sub-section-heading"
@@ -19,7 +19,26 @@ const VideoThumbnail = ({
   className?: string;
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLButtonElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '200px' }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   const handleClick = () => {
     const video = videoRef.current;
@@ -36,14 +55,15 @@ const VideoThumbnail = ({
 
   return (
     <button
+      ref={containerRef}
       type="button"
       className={`overflow-hidden relative cursor-pointer ${className ?? ""}`}
       onClick={handleClick}
     >
       <video
         ref={videoRef}
-        src={src}
-        preload="metadata"
+        src={isVisible ? src : undefined}
+        preload={isVisible ? "metadata" : "none"}
         playsInline
         className="w-full h-full object-cover"
         aria-label={alt}

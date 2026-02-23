@@ -37,6 +37,7 @@ const Gallery = () => {
              src={collagePic7}
              alt="Bride and Groom Dancing"
              className="w-full h-full object-cover"
+             loading="lazy"
            />
            <div className="absolute inset-0 bg-black opacity-65"></div>
            <div className="absolute inset-0 flex items-center justify-center z-10">
@@ -53,6 +54,7 @@ const Gallery = () => {
              src={collagePic8}
              alt="Bride and Groom in Dress Code"
              className="w-full h-full object-cover"
+             loading="lazy"
            />
            <div className="absolute inset-0 bg-black opacity-65"></div>
            <div className="absolute inset-0 flex items-center justify-center z-10">
@@ -69,6 +71,7 @@ const Gallery = () => {
              src={collagePic13}
              alt="Bride and Groom in Dress Code"
              className="w-full h-full object-cover"
+             loading="lazy"
            />
            <div className="absolute inset-0 bg-black opacity-65"></div>
            <div className="absolute inset-0 flex items-center justify-center z-10">
