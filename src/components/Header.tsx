@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logoWhite from '../assets/images/Transparent name 1 1.png';
-import { InstagramIcon } from './icon-components';
+import { FacebookIcon, InstagramIcon } from './icon-components';
 import { useIsMobile } from '../hooks/useIsobile';
 import {
   Sheet,
@@ -82,7 +82,13 @@ const Header = () => {
                     width={28}
                     height={28}
                     className="rounded-full transition-colors"
-                    onClick={() => handleSocialClick('https://www.instagram.com/weddings_by_jeremy?igsh=MTdkaWRmczRmYmZiaw==')}
+                    onClick={() => handleSocialClick('https://www.instagram.com/wellington_jade_studio?igsh=MTdkaWRmczRmYmZiaw==')}
+                  />
+                  <FacebookIcon
+                    width={40}
+                    height={40}
+                    className="hover:opacity-80 transition-opacity cursor-pointer"
+                    onClick={() => window.open('https://www.facebook.com/share/1C5s8m4FvH/?mibextid=wwXIfr', '_blank')}
                   />
                 </SheetTitle>
               </SheetHeader>
@@ -135,7 +141,13 @@ const Header = () => {
                 width={isMobile ? 20 : 40}
                 height={isMobile ? 20 : 40}
                 className="rounded-full transition-colors"
-                onClick={() => handleSocialClick('https://www.instagram.com/weddings_by_jeremy?igsh=MTdkaWRmczRmYmZiaw==')}
+                onClick={() => handleSocialClick('https://www.instagram.com/wellington_jade_studio?igsh=MTdkaWRmczRmYmZiaw==')}
+              />
+              <FacebookIcon
+                width={isMobile ? 20 : 40}
+                height={isMobile ? 20 : 40}
+                className="rounded-full transition-colors"
+                onClick={() => handleSocialClick('https://www.facebook.com/share/1C5s8m4FvH/?mibextid=wwXIfr')}
               />
             </div>
 

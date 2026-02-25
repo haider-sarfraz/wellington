@@ -1,5 +1,6 @@
 import React from 'react';
 import { InstagramIcon } from './icon-components/InstagramIcon';
+import { FacebookIcon } from './icon-components';
 
 const HOURS_OF_OPERATION: { day: string; open?: string; close?: string }[] = [
   { day: 'Monday' },
@@ -87,7 +88,13 @@ export const Footer = () => {
               width={40}
               height={40}
               className="hover:opacity-80 transition-opacity cursor-pointer"
-              onClick={() => window.open('https://www.instagram.com/weddings_by_jeremy?igsh=MTdkaWRmczRmYmZiaw==', '_blank')}
+              onClick={() => window.open('https://www.instagram.com/wellington_jade_studio?igsh=MTdkaWRmczRmYmZiaw==', '_blank')}
+            />
+            <FacebookIcon
+              width={40}
+              height={40}
+              className="hover:opacity-80 transition-opacity cursor-pointer"
+              onClick={() => window.open('https://www.facebook.com/share/1C5s8m4FvH/?mibextid=wwXIfr', '_blank')}
             />
           </div>
         </div>
