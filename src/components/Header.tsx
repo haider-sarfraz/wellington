@@ -85,8 +85,8 @@ const Header = () => {
                     onClick={() => handleSocialClick('https://www.instagram.com/wellington_jade_studio?igsh=MTdkaWRmczRmYmZiaw==')}
                   />
                   <FacebookIcon
-                    width={40}
-                    height={40}
+                    width={28}
+                    height={28}
                     className="hover:opacity-80 transition-opacity cursor-pointer"
                     onClick={() => window.open('https://www.facebook.com/share/1C5s8m4FvH/?mibextid=wwXIfr', '_blank')}
                   />

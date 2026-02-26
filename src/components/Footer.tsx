@@ -50,7 +50,7 @@ export const Footer = () => {
             <h3 className="opacity-90 text-sm font-public-sans font-normal mb-2">Hours of Operation</h3>
             <div className="grid grid-cols-3 gap-x-4 gap-y-1 text-left opacity-80 text-sm font-public-sans font-extralight">
               <span className="font-semibold mb-2">Day</span>
-              <span className="font-semibold mb-2">Opens at</span>
+              <span className="font-semibold mb-2 text-center">Opens at</span>
               <span className="font-semibold mb-2 text-right">Closes at</span>
               {HOURS_OF_OPERATION.map(({ day, open, close }) => {
                 const isClosed = !open;
@@ -64,7 +64,7 @@ export const Footer = () => {
                       </>
                     ) : (
                       <>
-                        <span>{open}</span>
+                        <span className='text-center'>{open}</span>
                         <span className="text-right">{close}</span>
                       </>
                     )}
