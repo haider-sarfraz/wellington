@@ -1,91 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import { useRef, useState, useEffect } from "react";
 import { Description } from "../../../components/design-system/description"
 import { Heading } from "../../../components/design-system/heading"
 import { SubSectionHeading } from "../../../components/design-system/sub-section-heading"
-import playIcon from "../../../assets/images/play-icon.png";
 import { CollageBasic1 } from "../../../components/collages/CollageBasic1";
 import allisonIshaanVideo from "../../../assets/videos/Allison-Ishaan-Sneak-Peak.webm";
 import emilyBrettVideo from "../../../assets/videos/Emily-Brett-Sneak-Peak.webm";
 import laurenEthanVideo from "../../../assets/videos/Lauren-Ethan-Sneak-Peak.webm";
+import { VideoThumbnail } from "@/components/video-thumbnail/root";
 
-const VideoThumbnail = ({
-  src,
-  alt,
-  className,
-}: {
-  src: string;
-  alt: string;
-  className?: string;
-}) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const containerRef = useRef<HTMLButtonElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: '200px' }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  const handleClick = () => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    if (isPlaying) {
-      video.pause();
-      setIsPlaying(false);
-    } else {
-      video.play();
-      setIsPlaying(true);
-    }
-  };
-
-  return (
-    <button
-      ref={containerRef}
-      type="button"
-      className={`overflow-hidden relative cursor-pointer ${className ?? ""}`}
-      onClick={handleClick}
-    >
-      <video
-        ref={videoRef}
-        src={isVisible ? src : undefined}
-        preload={isVisible ? "metadata" : "none"}
-        playsInline
-        className="w-full h-full object-cover"
-        aria-label={alt}
-        onEnded={() => setIsPlaying(false)}
-      >
-        <track kind="captions" />
-      </video>
-      {!isPlaying && (
-        <>
-          <div className="absolute inset-0 bg-black opacity-45" />
-          <div className="absolute inset-0 flex items-center justify-center z-10">
-            <img
-              src={playIcon}
-              alt="Play"
-              className="w-16 h-16 md:w-20 md:h-20"
-            />
-          </div>
-        </>
-      )}
-    </button>
-  );
-};
 
 export const Gallery = () => {
   const navigate = useNavigate();

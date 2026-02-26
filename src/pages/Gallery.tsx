@@ -7,6 +7,10 @@ import collagePic7 from "../assets/images/gallery-pictures/collage-pic-7.jpg";
 import collagePic8 from "../assets/images/gallery-pictures/collage-pic-8.jpg";
 import collagePic13 from "../assets/images/gallery-pictures/collage-pic-13.png";
 import playIcon from "../assets/images/play-icon.png";
+import { VideoThumbnail } from "@/components/video-thumbnail/root";
+import allisonIshaanVideo from "../assets/videos/Allison-Ishaan-Sneak-Peak.webm";
+import emilyBrettVideo from "../assets/videos/Emily-Brett-Sneak-Peak.webm";
+import laurenEthanVideo from "../assets/videos/Lauren-Ethan-Sneak-Peak.webm";
 
 const Gallery = () => {
   return (
@@ -26,64 +30,109 @@ const Gallery = () => {
         </div>
       </div>
     </div>
-     <div className="w-full flex justify-center mb-12 px-[13%]">
+    
+    <div className="w-full flex flex-col justify-center mb-12 px-[13%]">
       <div className="grid grid-cols-12 gap-6 auto-rows-[200px]">
         <CollageBasic1 />
         <CollageBasic2 />
-         
-         {/* pictures with play icon*/}
-         <div className="md:row-span-3 row-span-1 col-span-12 overflow-hidden relative">
-           <img
-             src={collagePic7}
-             alt="Bride and Groom Dancing"
-             className="w-full h-full object-cover"
-             loading="lazy"
-           />
-           <div className="absolute inset-0 bg-black opacity-65"></div>
-           <div className="absolute inset-0 flex items-center justify-center z-10">
-             <img
-               src={playIcon}
-               alt="Play"
-               className="w-16 h-16 md:w-20 md:h-20"
-             />
-           </div>
-         </div>
+        {/* </div> */}
+        {/* pictures with play icon
+        <div className="md:row-span-3 row-span-1 col-span-12 overflow-hidden relative">
+          <img
+            src={collagePic7}
+            alt="Bride and Groom Dancing"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-black opacity-65"></div>
+          <div className="absolute inset-0 flex items-center justify-center z-10">
+            <img
+              src={playIcon}
+              alt="Play"
+              className="w-16 h-16 md:w-20 md:h-20"
+            />
+          </div>
+        </div>
 
-         <div className="md:col-span-4 md:row-span-2 row-span-1 col-span-6 overflow-hidden relative">
-           <img
-             src={collagePic8}
-             alt="Bride and Groom in Dress Code"
-             className="w-full h-full object-cover"
-             loading="lazy"
-           />
-           <div className="absolute inset-0 bg-black opacity-65"></div>
-           <div className="absolute inset-0 flex items-center justify-center z-10">
-             <img
-               src={playIcon}
-               alt="Play"
-               className="w-16 h-16 md:w-20 md:h-20"
-             />
-           </div>
-         </div>
+        <div className="md:col-span-4 md:row-span-2 row-span-1 col-span-6 overflow-hidden relative">
+          <img
+            src={collagePic8}
+            alt="Bride and Groom in Dress Code"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-black opacity-65"></div>
+          <div className="absolute inset-0 flex items-center justify-center z-10">
+            <img
+              src={playIcon}
+              alt="Play"
+              className="w-16 h-16 md:w-20 md:h-20"
+            />
+          </div>
+        </div>
 
-         <div className="md:col-span-8 md:row-span-2 row-span-1 col-span-6 overflow-hidden relative">
-           <img
-             src={collagePic13}
-             alt="Bride and Groom in Dress Code"
-             className="w-full h-full object-cover"
-             loading="lazy"
-           />
-           <div className="absolute inset-0 bg-black opacity-65"></div>
-           <div className="absolute inset-0 flex items-center justify-center z-10">
-             <img
-               src={playIcon}
-               alt="Play"
-               className="w-16 h-16 md:w-20 md:h-20"
-             />
-           </div>
-         </div>
-       </div>
-     </div>
+        <div className="md:col-span-8 md:row-span-2 row-span-1 col-span-6 overflow-hidden relative">
+          <img
+            src={collagePic13}
+            alt="Bride and Groom in Dress Code"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-black opacity-65"></div>
+          <div className="absolute inset-0 flex items-center justify-center z-10">
+            <img
+              src={playIcon}
+              alt="Play"
+              className="w-16 h-16 md:w-20 md:h-20"
+            />
+          </div>
+        </div> */}
+      </div>
+
+      {/* Divider */}
+      <div className="w-full flex justify-center md:mt-20 mt-12 px-[13%]">
+        <div className="w-full border-t border-brand-charcoal/20" />
+      </div>
+
+      {/* Films Section */}
+      <div className="w-full flex flex-col items-center md:mt-10 mt-6 md:gap-10 gap-6">
+        {/* <Heading>
+          Films
+        </Heading> */}
+        <div className="flex flex-col items-center gap-4">
+          <SubSectionHeading className="text-center">
+            Your Story in Motion.
+          </SubSectionHeading>
+          <div className="flex flex-col gap-8 items-center text-center px-6 md:px-0">
+            <Description className="text-center">
+              Every love story deserves to be heard — the laughter, the vows, the music, the quiet whispers. Our cinematic films preserve the emotion and energy of your day in a way that still photographs simply cannot.
+            </Description>
+          </div>
+        </div>
+
+        <div className="w-full flex justify-center">
+          <div className="w-full">
+            <div className="grid grid-cols-12 md:gap-6 gap-4 auto-rows-[250px] md:auto-rows-[350px]">
+              <VideoThumbnail
+                src={allisonIshaanVideo}
+                alt="Allison & Ishaan Wedding Film"
+                className="col-span-12 md:col-span-8 row-span-1 md:row-span-2"
+              />
+              <VideoThumbnail
+                src={emilyBrettVideo}
+                alt="Emily & Brett Wedding Film"
+                className="col-span-12 md:col-span-4 row-span-1"
+              />
+              <VideoThumbnail
+                src={laurenEthanVideo}
+                alt="Lauren & Ethan Wedding Film"
+                className="col-span-12 md:col-span-4 row-span-1"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
    </>
   );
 };
