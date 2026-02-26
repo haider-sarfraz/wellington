@@ -17,7 +17,11 @@ function AppInner() {
   return (
     <div className="min-h-screen">
       <ScrollToTop />
+
+      {/* App Header */}
       <Header />
+
+      {/* App Pages */}
       <Suspense fallback={<div className="min-h-screen" />}>
         <Routes>
           <Route path="/" element={<AppLayout />}>
@@ -29,6 +33,8 @@ function AppInner() {
           <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
       </Suspense>
+
+      {/* App Footer */}
       <Footer />
     </div>
   );

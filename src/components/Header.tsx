@@ -78,19 +78,22 @@ const Header = () => {
               <SheetHeader className='px-6 pt-4'>
                 <SheetTitle className='text-brand-super-white font-bold flex items-center justify-between'>
                   <span className='text-md'>Wellington Jade Studio</span>
-                  <InstagramIcon
-                    width={28}
-                    height={28}
-                    className="rounded-full transition-colors"
-                    onClick={() => handleSocialClick('https://www.instagram.com/wellington_jade_studio?igsh=MTdkaWRmczRmYmZiaw==')}
-                  />
-                  <FacebookIcon
-                    width={28}
-                    height={28}
-                    className="hover:opacity-80 transition-opacity cursor-pointer"
-                    onClick={() => window.open('https://www.facebook.com/share/1C5s8m4FvH/?mibextid=wwXIfr', '_blank')}
-                  />
                 </SheetTitle>
+                {/* Social media menu item */}
+                <div className="flex items-center p-3 pl-0 gap-4">
+                    <InstagramIcon
+                      width={28}
+                      height={28}
+                      className="rounded-full transition-colors"
+                      onClick={() => handleSocialClick('https://www.instagram.com/wellington_jade_studio?igsh=MTdkaWRmczRmYmZiaw==')}
+                    />
+                    <FacebookIcon
+                      width={28}
+                      height={28}
+                      className="hover:opacity-80 transition-opacity cursor-pointer"
+                      onClick={() => window.open('https://www.facebook.com/share/1C5s8m4FvH/?mibextid=wwXIfr', '_blank')}
+                    />
+                  </div>
               </SheetHeader>
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex flex-col justify-between h-full pt-4 px-6 pb-6">
@@ -111,7 +114,7 @@ const Header = () => {
                   ))}
                 </nav>
 
-                <div className="flex flex-col gap-4 pb-10">
+                <div className="flex flex-col gap-4 pb-28">
                   <button
                     type="button"
                     className="bg-brand-super-white hover:bg-brand-super-white/90 text-brand-charcoal font-public-sans font-medium px-6 py-3 rounded-full text-base tracking-tight transition-colors"
