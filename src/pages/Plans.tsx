@@ -1,10 +1,10 @@
 import { Description } from "../components/design-system/description";
 import { FramedImage } from "../components/design-system/framed-image";
 import { Heading } from "../components/design-system/heading";
-import brideOutdoor from "../assets/images/gallery-pictures/collage-pic-5.jpg";
-import coupleOutdoor from "../assets/images/gallery-pictures/collage-pic-3.jpg";
-import bouqueHolderIndoor from "../assets/images/gallery-pictures/collage-pic-2.jpg";
-import brideWithRosesPhoto from "../assets/images/gallery-pictures/bride-with-rose-front-photo.png";
+import brideWithFlowersIndoor from "../assets/images/plan-pictures/bride-with-flowers-indoor.png";
+import coupleOutdoorNature from "../assets/images/plan-pictures/couple-outdoor-nature.png";
+import coupleNextToRetroCar from "../assets/images/plan-pictures/couple-next-to-retro-car.png";
+import coupleEntryScene from "../assets/images/plan-pictures/couple-entry-scene.png";
 import { SubSectionHeading } from "../components/design-system/sub-section-heading";
 import { useIsMobile } from "../hooks/useIsobile";
 import { MobileFramedImage } from "../components/design-system/mobile-framed-image";
@@ -47,13 +47,13 @@ const Plans = () => {
         {/* Right Side - Image with Golden Border */}
         {isMobile ? (
           <MobileFramedImage 
-            src={brideOutdoor}
+            src={brideWithFlowersIndoor}
             alt="Bride with elegant wedding dress"
             direction="left"
           />
         ) : (
           <FramedImage 
-            src={brideOutdoor}
+            src={brideWithFlowersIndoor}
             alt="Bride with elegant wedding dress"
             direction="left"
           />
@@ -69,15 +69,15 @@ const Plans = () => {
         </span>
         {isMobile ? (
           <MobileFramedImage 
-            src={coupleOutdoor}
-            alt="Bride with elegant wedding dress"
+            src={coupleOutdoorNature}
+            alt="Couple outdoor nature"
             direction="left"
           />
         ) : (
         <div className="md:w-[40%] flex md:items-start">
           <FramedImage 
-            src={coupleOutdoor}
-            alt="Bride with elegant wedding dress"
+            src={coupleOutdoorNature}
+            alt="Couple outdoor nature"
             direction="left"
           />
         </div>
@@ -126,14 +126,14 @@ const Plans = () => {
         {/* Right Side - Image with Golden Border */}
         {isMobile ? (
           <MobileFramedImage 
-            src={bouqueHolderIndoor}
-            alt="Bride holding a bouque indoor"
+            src={coupleNextToRetroCar}
+            alt="Couple next to a retro car"
             direction="left"
           />
         ) : (
           <FramedImage 
-            src={bouqueHolderIndoor}
-            alt="Bride holding a bouque indoor"
+            src={coupleNextToRetroCar}
+            alt="Couple next to a retro car"
             direction="left"
           />
         )}
@@ -149,14 +149,14 @@ const Plans = () => {
         <div className="w-full md:w-[40%] flex justify-center md:justify-start md:items-start">
           {isMobile ? (
             <MobileFramedImage 
-              src={brideWithRosesPhoto}
-              alt="Bride with roses photo"
+              src={coupleEntryScene}
+              alt="Couple entry scene"
               direction="left"
             />
           ) : (
           <FramedImage 
-            src={brideWithRosesPhoto}
-            alt="Bride with roses photo"
+            src={coupleEntryScene}
+            alt="Couple entry scene"
             direction="left"
           />
           )}
