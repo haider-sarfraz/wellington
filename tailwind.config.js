@@ -20,6 +20,14 @@ export default {
   				'CarlaSans',
   				'sans-serif'
   			],
+  			'carla-light': [
+  				'CarlaSansLight',
+  				'sans-serif'
+  			],
+  			'carla-bold': [
+  				'CarlaSansBold',
+  				'sans-serif'
+  			],
   			brittany: [
   				'Brittany Signature',
   				'cursive'

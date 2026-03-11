@@ -31,6 +31,22 @@
 }
 
 @font-face {
+  font-family: 'CarlaSansLight';
+  src: url('./assets/fonts/carla-sans-light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CarlaSansBold';
+  src: url('./assets/fonts/carla-sans-bold.ttf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'PP Hatton';
   src: url('./assets/fonts/PP Hatton Ultralight 200.otf') format('opentype');
   font-weight: 200;

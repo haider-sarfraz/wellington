@@ -28,7 +28,7 @@ export const Footer = () => {
         </p>
         
         {/* Contact Information Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-center md:text-left md:pl-[10rem]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-center md:text-left md:px-[10rem]">
           {/* Address */}
           <div>
             <h3 className="opacity-90 text-sm font-public-sans font-normal mb-2">Address</h3>
@@ -80,7 +80,7 @@ export const Footer = () => {
         
         {/* Footer Bottom - Copyright and Social Icons */}
         <div className="flex flex-col md:flex-row items-center gap-4">
-          <p className="text-sm font-public-sans font-normal text-center md:w-3/4 w-full md:ml-[25%] ml-0">All Rights Reserved.</p>
+          <p className="text-sm font-public-sans font-normal text-center flex-1">All Rights Reserved.</p>
           
           {/* Social Media Icons */}
           <div className="flex gap-4 w-1/4 items-center justify-center md:justify-end">

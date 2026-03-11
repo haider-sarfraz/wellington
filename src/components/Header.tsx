@@ -10,6 +10,7 @@ import {
   SheetTitle,
   SheetHeader,
 } from '@/components/ui/sheet';
+import { cn } from '@/lib/utils';
 
 const Header = () => {
   const location = useLocation();
@@ -42,8 +43,10 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-black-overlay w-[]">
-        <div className="flex items-center justify-between px-3 sm:px-6 lg:px-8 py-4 w-full">
+    <header className={cn("fixed top-0 left-0 right-0 z-50 bg-brand-black-overlay w-[]", {
+      "bg-brand-cyan-blue": !isActive("/")
+    })}>
+        <div className="relative flex items-center justify-between px-3 sm:px-6 lg:px-8 py-4 w-full">
           {/* Left Navigation - Desktop */}
           <nav className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
@@ -52,7 +55,7 @@ const Header = () => {
                 to={link.path}
                 className={`font-public-sans font-normal text-base tracking-tight transition-colors pb-1 ${
                   isActive(link.path)
-                    ? 'text-brand-super-white border-b-2 border-brand-gold'
+                    ? `text-brand-super-white ${isActive('/') ? 'border-b-2 border-brand-gold' : ''}`
                     : 'text-brand-super-white/80 hover:text-brand-super-white'
                 }`}
               >
@@ -127,13 +130,23 @@ const Header = () => {
             </SheetContent>
           </Sheet>
 
-          {/* Center Logo */}
-          <Link to="/" className="flex-shrink-0">
+          {/* Center Logo — absolutely centered */}
+          <Link to="/" className="absolute left-1/2 -translate-x-1/2">
+            {/* Mobile: image logo */}
             <img
               src={logoWhite}
-              alt="Wellington Jade Studio - Where Moments Become Memories"
-              className="h-5 sm:h-7 md:h-8 w-auto object-contain"
+              alt="Wellington Jade Studio"
+              className="lg:hidden h-5 sm:h-7 w-auto object-contain"
             />
+            {/* Desktop: text logo */}
+            <span className="hidden lg:flex flex-col items-center leading-none gap-3">
+              <span className="font-carla-light tracking-[4px] text-brand-super-white text-[22px] uppercase">
+                Wellington Jade Studio
+              </span>
+              <span className="font-carla-bold font-extrabold tracking-[0.55em] text-brand-super-white/80 text-[10px] uppercase">
+                Where Moments Become Memories
+              </span>
+            </span>
           </Link>
 
           {/* Right Side - Social & CTA */}
